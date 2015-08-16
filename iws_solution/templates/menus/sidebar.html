@@ -1,0 +1,25 @@
+{% load staticfiles %}
+<div class="cl-sidebar" data-position="right" data-step="1" data-intro="<strong>Fixed Sidebar</strong> <br/> It adjust to your needs." >
+	<div class="cl-toggle"><i class="fa fa-bars"></i></div>
+	<div class="cl-navblock">
+    <div class="menu-space">
+      <div class="content">
+        <div class="side-user" style="padding:0px;0px;0px;0px;">
+          <div ><img src="{% static 'images/logo.png' %}" style="width:216px;height:169px;"/></div>
+        </div>
+        <ul class="cl-vnavigation">
+          <li class="active"><a href="{% url 'home'%}"><i class="fa fa-home"></i><span>Home</span></a></li>
+          <li class="active"><a href="{% url 'home'%}"><i class="fa fa-home"></i><span>Click Me</span></a><ul class="sub-menu" style="display: none;">
+                  <li><a href="layouts-sidebar.html">READ ME</a></li>
+                </ul></li>
+          
+        </ul></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="text-right collapse-button" style="padding:7px 9px;">
+      <input type="text" class="form-control search" placeholder="Search..." />
+      <button id="sidebar-collapse" class="btn btn-default" style=""><i style="color:#fff;" class="fa fa-angle-left"></i></button>
+    </div>
+	</div>
+</div>

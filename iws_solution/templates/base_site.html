@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="images/favicon.png">
+    <title>{%block title%}Civilization Party{%endblock%}</title>
+    {% load staticfiles %}
+	  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic,700,800' rel='stylesheet' type='text/css'>
+	  <link href='http://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
+  	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+	  <link rel="stylesheet" type="text/css" href="{% static 'css/fonts/font-awesome.min.css' %}">
+	  <!-- Custom styles for this template -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+</head>
+<body>
+	<!-- Fixed Top Nav Bar -->
+	{%include 'menus/topnav.html'%}
+	<div id="cl-wrapper" class="fixed-menu">
+		<!-- Fixed sidebar -->
+		{%include 'menus/sidebar.html'%}
+		<div class="container-fluid" id="pcont">
+		  {%block content%}{%endblock%}
+		</div> 	
+	</div>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="{% static 'js/jquery.nanoscroller/jquery.nanoscroller.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/behavior/general.js' %}"></script>
+  	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript">
+      $(document).ready(function(){
+        //initialize the javascript
+        App.init();
+        App.dashBoard();
+        introJs().setOption('showBullets', false).start();
+
+      });
+    </script>
+  </body>
+</html>
