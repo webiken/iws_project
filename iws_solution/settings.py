@@ -41,6 +41,7 @@ INSTALLED_APPS = (
 
     'storages',
     'iws_solution',
+    'bootstrapform',
 )
 
 MIDDLEWARE_CLASSES = (
