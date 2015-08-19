@@ -44,4 +44,4 @@ The boostrap table with feature requests has an edit in place feature.  Any cell
 Target Dates and Ticekt URLs are validated.
 
 ###Static Assets###
-Static Assets are hosted on Amaozon S3.  For clarity, then are also included in `project-root/static-assets`.
+Static Assets are hosted on Amaozon S3.  For clarity, they are also included in `project-root/static-assets`.
