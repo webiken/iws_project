@@ -34,6 +34,6 @@ EXPOSE 8000
 
 # Set the default directory where CMD will execute
 WORKDIR /opt/iws_project
-
-RUN source /opt/iws_project/venv/bin/activate && /opt/iws_project/manage.py runserver 0.0.0.0 8000
+ 
+RUN source /opt/iws_project/venv/bin/activate && /opt/iws_project/manage.py syncdb --noinput
 
