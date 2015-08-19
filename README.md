@@ -25,12 +25,23 @@ The Dockerfile does several things.  Since RHEL and CentOS come with python 2.6,
 ###Unit Tests###
 In `iws_project/iws_solution/tests.py` is a TestCase with a single unit test for ensuring that when saving a feature request the priorities are re-ordered correctly.
 
+###Validation###
+- Target Date in the future
+- Client Priority always an Integer and greater than 0
+- Tickker URL is a valid URL
+- Required Fields
+
 ###Routes###
 - home
 - list
 - list/client-id
+- edit
 
-The `home` route is the the `/` url and is where a user can save a feature request.  Once a feature request is successfuly saved, the response is redirected to `/list` with no additional args.  There the user is presented with a drop down list of `Clients`.  Once a client is chosen, the page is redirected to `/list/client-id`
+The `home` route is the the `/` url and is where a user can save a feature request.  Once a feature request is successfuly saved, the response is redirected to `/list` with no additional args.  There the user is presented with a drop down list of `Clients`.  Once a client is chosen, the page is redirected to `/list/client-id`.
+
+The boostrap table with feature requests has an edit in place feature.  Any cell can be clicked,  edited, and ajax saved which will update the DB column for that feature based on its primary key.
+
+Target Dates and Ticekt URLs are validated.
 
 ###Static Assets###
 Static Assets are hosted on Amaozon S3.  For clarity, then are also included in `project-root/static-assets`.
