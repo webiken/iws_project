@@ -17,7 +17,7 @@ $ cd <clone-dir>
 $ docker build -t iws_soultion .
 $ docker run -t iws_solution -p 8000:8000 venv/bin/python manage.py runserver 0.0.0.0:8000
 ```
-Then simply point your browser on your machine to http://localhost:8000 and you will be able to see the application.
+Then simply point your browser on your machine to `http://localhost:8000` and you will be able to see the application.
 
 ### Dockerfile explanation###
 The Dockerfile does several things.  Since RHEL and CentOS come with python 2.6, the Dockerfile starts by downlaoding and building the Python 2.7.9 binary into `/usr/local/bin`.  It then creates a `virtual-environment` for the application, followed by installing `fixtues`.  Fixtures contain Client and Product Area model data.
