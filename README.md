@@ -10,7 +10,7 @@
 - Docker
 
 ##Running the App Locally##
-This application uses a Dockerfile to setup a docker container for local development.
+This application uses a `Dockerfile` to setup a docker container for local development.
 If you have Docker installed on your machine, please start the docker daemon, then do the following:
 ```
 $ cd <clone-dir>
