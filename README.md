@@ -32,6 +32,5 @@ In `iws_project/iws_solution/tests.py` is a TestCase with a single unit test for
 
 The `home` route is the the `/` url and is where a user can save a feature request.  Once a feature request is successfuly saved, the response is redirected to `/list` with no additional args.  There the user is presented with a drop down list of `Clients`.  Once a client is chosen, the page is redirected to `/list/client-id`
 
-
-
-
+###Static Assets###
+Static Assets are hosted on Amaozon S3.  For clarity, then are also included in `project-root/static-assets`.
