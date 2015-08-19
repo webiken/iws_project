@@ -15,6 +15,7 @@ If you have Docker installed on your machine, please start the docker daemon, th
 ```
 $ docker pull centos
 $ docker build -t iws_soultion .
+$ docker run -t iws_solution -p 8000:8000 venv/bin/python manage.py runserver 0.0.0.0:8000
 ```
 Then simply poing your browser on your machine to http://localhost:8000 and you will be able to see the application.
 
