@@ -20,7 +20,18 @@ $ docker run -t iws_solution -p 8000:8000 venv/bin/python manage.py runserver 0.
 Then simply point your browser on your machine to http://localhost:8000 and you will be able to see the application.
 
 ### Dockerfile explanation###
-The Dockerfile does several things.  Since RHEL and CentOS come with python 2.6, the Dockerfile starts by downlaoding and building the Python 2.7.9 binary into `/usr/local/bin`.  It then creates a `virtual-environment` for the application, followed by running `migrations` and launching the `development server`.
+The Dockerfile does several things.  Since RHEL and CentOS come with python 2.6, the Dockerfile starts by downlaoding and building the Python 2.7.9 binary into `/usr/local/bin`.  It then creates a `virtual-environment` for the application, followed by installing `fixtues`.  Fixtures contain Client and Product Area model data.
+
+###Unit Tests###
+In `iws_project/iws_solution/tests.py` is a TestCase with a single unit test for ensuring that when saving a feature request the priorities are re-ordered correctly.
+
+###Routes###
+- home
+- list
+- list/client-id
+
+The `home` route is the the `/` url and is where a user can save a feature request.  Once a feature request is successfuly saved, the response is redirected to `/list` with no additional args.  There the user is presented with a drop down list of `Clients`.  Once a client is chosen, the page is redirected to `/list/client-id`
+
 
 
 
