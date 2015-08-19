@@ -18,6 +18,7 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <![endif]-->
 	  <link rel="stylesheet" type="text/css" href="{% static 'css/fonts/font-awesome.min.css' %}">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet"/>
 	  <!-- Custom styles for this template -->
     <link href="{% static 'css/style.css' %}" rel="stylesheet" />
 </head>
@@ -31,14 +32,15 @@
 		  {%block content%}{%endblock%}
 		</div> 	
 	</div>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script> 
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="{% static 'js/jquery.nanoscroller/jquery.nanoscroller.js' %}"></script>
 	<script type="text/javascript" src="{% static 'js/behavior/general.js' %}"></script>
-  	<!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+  {%block extra_js%}
+  {%endblock%}
+  <!-- Placed at the end of the document so the pages load faster -->
     <script type="text/javascript">
       $(document).ready(function(){
         //initialize the javascript

@@ -1,0 +1,50 @@
+[
+  {
+    "model": "iws_solution.client",
+    "pk": 1,
+    "fields": {
+      "name": "Client A"
+    }
+  },
+  {
+    "model": "iws_solution.client",
+    "pk": 2,
+    "fields": {
+      "name": "Client B"
+    }
+  },
+  {
+    "model": "iws_solution.client",
+    "pk": 3,
+    "fields": {
+      "name": "Client C"
+    }
+  },
+  {
+    "model": "iws_solution.productarea",
+    "pk": 1,
+    "fields": {
+      "product_area": "Policies"
+    }
+  },
+  {
+    "model": "iws_solution.productarea",
+    "pk": 2,
+    "fields": {
+      "product_area": "Billing"
+    }
+  },
+  {
+    "model": "iws_solution.productarea",
+    "pk": 3,
+    "fields": {
+      "product_area": "Claims"
+    }
+  },{
+    "model": "iws_solution.productarea",
+    "pk": 4,
+    "fields": {
+      "product_area": "Reports"
+    }
+  }
+]

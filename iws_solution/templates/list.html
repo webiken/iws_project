@@ -1,0 +1,56 @@
+{%extends "base_site.html"%}
+{% load staticfiles %}
+{%block content%}
+ <div class="form-group">Client:
+ <select id="client_select">
+ 	<option  value="" selected="selected">---SELECT---</option>
+ 	{% for client in clients %}
+    <option value="{{client.id}}"
+       {% if client.id == client_id %}selected="selected"{% endif %}>
+       {{client.name|capfirst}}
+    </option>
+   {% endfor %}
+ </select>
+ </div>
+ {%if features%} 
+ <label>Edit In Place</label>	        
+  <table class="table table-bordered" id="features_tbl">
+    <thead>
+      <tr>
+      	<th>Priority</th>
+        <th>Product Area</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Target Date</th>
+        <th>Ticket URL</th>
+      </tr>
+    </thead>
+    <tbody>
+      {%for feature in features%}
+     	<tr>
+      		<td><a href="#" class="editable_feature" data-type="text" data-pk="{{feature.pk}}" data-url="{%url 'edit' %}" data-name="client_priority">{{feature.client_priority}}</a></td>
+      		<td><select >{%for product_area in product_areas%}<option value="{{product_area.pk}}" {%if product_area.pk == feature.product_area.pk %} selected="selected"{%endif%}>{{product_area}}</option>{%endfor%}</select></td>
+      		<td><a href="#" class="editable_feature" data-type="text" data-pk="{{feature.pk}}" data-url="{%url 'edit' %}" data-name="title">{{feature.title|capfirst}}</a></td>
+      		<td><a href="#" class="editable_feature" data-type="text" data-pk="{{feature.pk}}" data-url="{%url 'edit' %}" data-name="description">{{feature.description}}</a></td>
+      		<td><a href="#" class="editable_feature" data-type="text" data-pk="{{feature.pk}}" data-url="{%url 'edit' %}" data-name="target_date">{{feature.target_date|date:"M d, Y" }}<a></td>
+      		<td><a href="#" class="editable_feature" data-type="text" data-pk="{{feature.pk}}" data-url="{%url 'edit' %}" data-name="ticket_url">{{feature.ticket_url}}<a/></td>
+      	</tr>
+      {%endfor%}
+    </tbody>
+  </table>
+  {%endif%}
+ {%endblock%}
+ {%block extra_js%}
+   <script type="text/javascript" src="{% static 'js/list.js' %}"></script>
+   {%if features%}
+   <script>
+   	$(document).ready(function(){
+   		$(".editable_feature").editable({
+    success: function(response, newValue) {
+        if(response.status == 'error') return response.msg; //msg will be shown in editable form
+    }
+});
+   	});
+   </script>
+ {%endif%}
+ {%endblock%}
