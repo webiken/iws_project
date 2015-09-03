@@ -1,4 +1,4 @@
-# IWS Interview Solution by Sam Mohamed
+# Sample Solution by Sam Mohamed
 
 ## TechStack ##
 - Python Web Framework Django (version 1.8).
